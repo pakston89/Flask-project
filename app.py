@@ -2,7 +2,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/home")
+@app.route("/")
 def home():
     elements = []
     for i in range(100):
