@@ -6,7 +6,7 @@ app = Flask(__name__)
 def home():
     return "Welcome to home!"
 
-@app.route("/sum/<int:value>")
+@app.route("/sum/value")
 def sum(value):
     result = value + 5
     return "The result is {}".format(str(result))
