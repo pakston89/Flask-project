@@ -20,7 +20,8 @@ def multiply(value):
 @app.route("/inference/<int:n_inferences>")
 def inference(n_inferences):
 	vehicle_type = ["Car","Bus","Motorbike","Truck","Van"]
+	infer_stdout = ""
 	for i in range(n_inferences):
-		time.sleep(1)
-		return "Vehicle {}|{}|120Kmh".format(str(i),vehicle_type[i])
+		infer_stdout = infer_stdout + "Vehicle {}|{}|120Kmh \n".format(str(i),vehicle_type[i])
+	return infer_stdout
 	
