@@ -10,3 +10,8 @@ def home():
 def sum(value):
     result = value + 5
     return "The result is {}".format(str(result))
+    
+@app.route("/multiply/<int:value>")
+def multiply(value):
+	result = value * 5
+	return "The result is {}".format(str(result))
